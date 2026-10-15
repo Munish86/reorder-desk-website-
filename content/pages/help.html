@@ -1,0 +1,243 @@
+<!-- wp:paragraph {"className":"rd-lead"} -->
+<p class="rd-lead">Everything you need to set up Reorder Desk and use it every week. Can't find your answer? Write to [rd_support_email] with your store address (yourstore.myshopify.com) and, for a purchase order, its number.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"rd-toc","layout":{"type":"constrained"}} -->
+<div class="wp-block-group rd-toc"><!-- wp:paragraph -->
+<p>On this page</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><a href="#getting-started">Getting started</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#reorder-list">The reorder list</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#suppliers">Suppliers</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#purchase-orders">Purchase orders</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#receiving">Receiving stock</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#bundles">Bundles</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#emails">Emails and alerts</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#locations">Locations</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#plans">Plans and billing</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="getting-started">1. Getting started</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Install Reorder Desk from the Shopify App Store and open it from your Shopify admin. The first sync starts by itself: it reads your products and variants, stock per location, bundle components and sales history. It runs in the background, so you can keep working while it does.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>After that, stock levels update live whenever they change in Shopify, and products and sales are synced again every six hours. Click "Sync now" at the top of the reorder list to sync at any time.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Before your first order, open Settings and check three numbers: <strong>lead time</strong> (days from ordering to delivery), <strong>days to cover</strong> (how long each order should last) and <strong>safety stock</strong> (extra days of stock for surprises). The defaults are 14, 30 and 7 days.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="reorder-list">2. The reorder list</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The home page of the app. It opens on "Needs ordering": items that are out of stock, need ordering now, or will within two weeks, most urgent first. The other filters show items that are OK, overstocked, have no recent sales, or are not reordered.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Why?</strong> opens an item: how its sales per day, run-out date and order quantity were worked out, its weekly sales chart, its supplier details and your own settings for it.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Order</strong> is editable right in the list. Your number is kept until you clear it.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Select</strong> items to set their supplier at once, mark them as not reordered, or create purchase orders.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Download as CSV</strong> gives the list as it is filtered.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The exact method is on <a href="/how-it-works/">How forecasts work</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="suppliers">3. Suppliers</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Items without a supplier still get forecasts, but can't go on a purchase order. There are three ways to add suppliers:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>From vendors:</strong> on the Suppliers page, "Create suppliers from vendors" turns each product vendor into a supplier and links its items.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>From a sheet:</strong> import an Excel, CSV or Google Sheet with one row per item. Required: SKU (or barcode) and supplier. Optional: supplier SKU, cost, case pack, minimum order, lead time and supplier email. Columns are matched by name; check the mapping, click "Preview import", then import. A downloadable report lists every row's result.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>By hand:</strong> "Add supplier", or set the supplier for selected items on the reorder list.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>A supplier can have an email address (for sending orders), a contact name, a lead time and a minimum order value. Supplier names are unique, ignoring capital letters. For a private Google Sheet, share it (Viewer) with the app's Google address shown in Settings, or set it to "Anyone with the link can view".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="purchase-orders">4. Purchase orders</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>On the reorder list, select items (or "Select all that need ordering") and click "Create purchase orders". You get one draft per supplier; if that supplier already has an open draft, the items are added to it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Edit quantities, unit costs and supplier SKUs, remove lines, or add items by searching name, SKU or barcode.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Set the location to receive at, the expected date, shipping cost, currency and notes.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Send to supplier</strong> emails the order with a PDF and CSV attached; replies go to the address in Settings. Or click <strong>Mark as sent</strong> if you order another way.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Your company name, order number prefix and terms are set in Settings and printed on every order.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Only sent orders count as stock on order, unless you switch on "Count draft purchase orders as already on order" in Settings. A sent order can go back to draft, be cancelled, closed short (when the supplier won't deliver the rest) or reopened.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="receiving">5. Receiving stock</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Open the purchase order and click "Receive stock". Enter how many of each item arrived and save. The stock is added in Shopify at the order's receiving location straight away, and the order shows what is still to come.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tick "Update cost per item in Shopify" to set each item's cost to the order's unit cost. Received the wrong number? Find the receipt under "Stock received" and click <strong>Undo</strong>: the same quantity is taken back in Shopify. If saving fails because of a connection problem, "Retry" is safe: a receipt is never added twice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="bundles">6. Bundles</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bundles made with Shopify's bundle components are read automatically. For bundles from other apps, find the bundle on the reorder list (the "Not reordered" filter or search), open it and set up its parts. From then on, every bundle sale counts as sales of its parts, and the bundle itself is not reordered.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="emails">7. Emails and alerts</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Weekly email:</strong> what to order this week, on the day and hour you choose, in your store's time zone. Sent only when something needs ordering.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Low-stock alert:</strong> a daily email when items newly need ordering. Each item is mentioned once, until it is restocked.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Both go to the store email, or to the addresses you enter in Settings. "Send a test email" checks delivery. Every email has a one-click unsubscribe link. Reorder Desk never sends marketing emails.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="locations">8. Locations</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In Settings, choose which Shopify locations' stock counts towards the forecast, and the default location to receive deliveries at. On the Free plan one location is counted (your oldest, normally the main one, unless you choose another); Pro counts as many as you tick.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="plans">9. Plans and billing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Free gives suggestions for your 50 best-selling variants; Pro has no limit, counts several locations and adds seasonal forecasts. Change plans on the Plans page in the app; billing is handled by Shopify. See <a href="/pricing/">Pricing</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="troubleshooting">10. Troubleshooting</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">A suggestion looks wrong</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Open the item with "Why?" and read the sum. Usually the lead time is off, an old sale spike is still in the history, or stock on order isn't what you expect. Set the item's sales per day, days to cover, safety stock or quantity yourself, or mark it as not reordered.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Only 60 days of sales are used</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Shopify gives apps the last 60 days of orders until it approves access to older ones. Once approved, Reorder Desk reads up to two years of sales by itself.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">An item is missing from the list</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Check the "All" filter and the search. Items with no sales are under "No recent sales". On Free, items outside your 50 best sellers are listed without a suggestion. A product created a moment ago appears after the next sync.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">A supplier didn't get the email</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Check the supplier's email address, then the email log in Settings, which shows every email sent and its result. You can always download the PDF and send it yourself.</p>
+<!-- /wp:paragraph -->

@@ -1,0 +1,177 @@
+<!-- wp:group {"align":"full","className":"rd-hero rd-page-hero","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull rd-hero rd-page-hero"><!-- wp:paragraph {"className":"rd-eyebrow"} -->
+<p class="rd-eyebrow">How forecasts work</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">No black box. Just sums you can check.</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"rd-lead"} -->
+<p class="rd-lead">This page shows exactly how Reorder Desk decides what to reorder and how many. The same steps run for every item, and the app shows you each item's own numbers in its "Why?" panel.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"rd-section","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull rd-section"><!-- wp:heading -->
+<h2 class="wp-block-heading">The whole thing in one line</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"rd-formula"} -->
+<p class="rd-formula"><strong>Order</strong> = (lead time + days to cover) × sales per day<br>        + safety stock<br>        − in stock − already on order<br><strong>then</strong> round up to whole case packs and the minimum order</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In words: buy enough to last until the delivery arrives, plus the period you want each order to cover, plus a cushion for surprises, minus what you already have or have ordered. The rest of this page explains where each number comes from.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">1. Sales per day</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Reorder Desk adds up each item's sales per week from your Shopify orders (online and point of sale; cancelled and test orders left out). It then takes a weighted average of the weekly sales rates over the history you choose, 90 days by default:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"rd-check"} -->
+<ul class="wp-block-list rd-check"><!-- wp:list-item -->
+<li><strong>Recent weeks count more.</strong> Each week back counts 0.85 times the week after it, so last week counts fully, four weeks ago about 60%, and three months ago less than 15%. Forecasts follow a trend without jumping on one odd week.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Out-of-stock days are left out.</strong> If an item sold 20 units in a week but was only in stock for 4 days, its rate that week is 5 a day, not 2.9. Weeks with fewer than 2 days in stock are skipped. A stock-out never lowers the forecast for the next order.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Bundle sales count for their parts.</strong> If a "Tea Set" bundle contains two mugs, each Tea Set sold counts as two mugs sold.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>With less than four weeks of history, or fewer than five sales, the item is marked as a rough guide. Items with no sales in the history period are listed under "No recent sales" and not reordered.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">2. Seasonal adjustment (Pro)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>With a year of history, Reorder Desk compares last year's sales in the weeks ahead (the lead time plus the days to cover) with last year's sales in the weeks before. If sales rose by 40% at this time last year, this year's rate is raised by 40% too. Changes under 15% are ignored, the change is limited to between half and three times the normal rate, and it needs at least 10 units sold last year. The "why" shows the factor used.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">3. Stock position</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Stock available at the locations you count, plus stock on sent purchase orders not yet received. You can choose to count draft purchase orders and Shopify transfers in transit as well.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">4. Reorder point and status</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The reorder point is the stock you need to get through the lead time with the safety stock untouched: <code>sales per day × lead time + safety stock</code>. The status follows from it:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"rd-table"} -->
+<figure class="wp-block-table rd-table"><table><thead><tr><th>Status</th><th>When</th></tr></thead><tbody><tr><td>Out of stock</td><td>Nothing available now, and the item sells.</td></tr><tr><td>Order now</td><td>Stock plus what is on order is at or below the reorder point.</td></tr><tr><td>Order soon</td><td>It will reach the reorder point within the next 14 days.</td></tr><tr><td>OK</td><td>Enough stock for now.</td></tr><tr><td>Overstock</td><td>More than 180 days of stock (you can change the number).</td></tr><tr><td>No recent sales</td><td>Nothing sold in the history period.</td></tr><tr><td>Not reordered</td><td>You marked it "don't reorder", or it is a bundle.</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Each item also gets an "order by" date: the last day you can order and still have the safety stock intact when the delivery arrives.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">5. Quantity and rounding</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The quantity from the one-line formula is rounded up to whole case packs, then raised to the minimum order quantity if it is below it (still in whole packs). On a purchase order, Reorder Desk also warns when the order's total value is under the supplier's minimum order value.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"rd-section rd-section--canvas","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull rd-section rd-section--canvas"><!-- wp:paragraph {"className":"rd-eyebrow"} -->
+<p class="rd-eyebrow">Worked example</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why the app says "order 194" white mugs</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is the item from the screenshot on the home page. The supplier takes 14 days to deliver, the store wants each order to cover 30 days, and keeps 7 days of safety stock.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"rd-table"} -->
+<figure class="wp-block-table rd-table"><table><thead><tr><th>Step</th><th>Number</th><th>Where it comes from</th></tr></thead><tbody><tr><td>Sales per day</td><td>4</td><td>28 sold in the last 7 days, 112 in the last 28, recent weeks weighted more. Includes 20 units sold inside Tea Set bundles.</td></tr><tr><td>Needed until the next order is used up</td><td>176</td><td>(14 days lead time + 30 days to cover) × 4 a day</td></tr><tr><td>Safety stock</td><td>28</td><td>7 days × 4 a day</td></tr><tr><td>Already have</td><td>10</td><td>10 in stock, nothing on order</td></tr><tr><td>Order</td><td>194</td><td>176 + 28 − 10. No case pack or minimum, so no rounding.</td></tr><tr><td>Status</td><td>Order now</td><td>10 in stock lasts about 2 days; the delivery takes 14.</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>If the supplier sold these mugs in cases of 12, the order would be rounded up to 204 (17 cases). If their minimum order was 250 units, it would become 252 (21 cases).</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"rd-section","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull rd-section"><!-- wp:heading -->
+<h2 class="wp-block-heading">The settings, and where to change them</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Every store starts with the defaults below; change them for the whole store in Settings. Lead time can also be set per supplier, and an item's own settings in its "Why?" panel always win over the store's.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false,"className":"rd-table"} -->
+<figure class="wp-block-table rd-table"><table><thead><tr><th>Setting</th><th>Default</th><th>What it means</th></tr></thead><tbody><tr><td>Sales history</td><td>90 days</td><td>How far back sales are read for the rate (14 to 365 days).</td></tr><tr><td>Lead time</td><td>14 days</td><td>From ordering to the stock arriving. Per item, then supplier, then store.</td></tr><tr><td>Days to cover</td><td>30 days</td><td>How long each order should last after it arrives.</td></tr><tr><td>Safety stock</td><td>7 days</td><td>Extra stock for a late delivery or a busy week, in days of sales.</td></tr><tr><td>Dead stock</td><td>90 days</td><td>No sale for this long puts an item on the dead stock report.</td></tr><tr><td>Overstock</td><td>180 days</td><td>More stock than this many days of sales.</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>You can also override the result itself: set an item's sales per day (for a product you know is about to take off), or type the quantity to order. The "why" then says the number is yours.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"rd-section rd-section--canvas","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull rd-section rd-section--canvas"><!-- wp:group {"className":"rd-section-head","layout":{"type":"constrained"}} -->
+<div class="wp-block-group rd-section-head"><!-- wp:heading -->
+<h2 class="wp-block-heading">Questions about the maths</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"rd-faq","layout":{"type":"constrained"}} -->
+<div class="wp-block-group rd-faq"><!-- wp:details -->
+<details class="wp-block-details"><summary>Why not use AI or machine learning?</summary><!-- wp:paragraph -->
+<p>Most small and medium stores don't have enough sales per item for a complex model to beat a well-weighted average, and a number nobody can explain is hard to trust with real money. A clear method you can check and correct works better in practice.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>What about a product I'm about to promote?</summary><!-- wp:paragraph -->
+<p>Set its sales per day yourself in the "Why?" panel, or type the quantity you want. Your number is used until you clear it.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>A new product has no history. What happens?</summary><!-- wp:paragraph -->
+<p>Until it sells, it shows under "No recent sales" and is not reordered. Once it has a few sales, it gets a forecast marked as a rough guide until there are four weeks of history.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Does it count returns and cancellations?</summary><!-- wp:paragraph -->
+<p>Cancelled and test orders are left out. Sales of the last 35 days are read again at every sync, so later refunds and cancellations are picked up.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details -->
+<details class="wp-block-details"><summary>How often are the numbers updated?</summary><!-- wp:paragraph -->
+<p>Stock levels update live as they change in Shopify. Sales and products are synced every six hours, and you can sync any time with "Sync now".</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"rd-cta-wrap","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull rd-cta-wrap"><!-- wp:pattern {"slug":"reorder-desk/cta-band"} /--></div>
+<!-- /wp:group -->

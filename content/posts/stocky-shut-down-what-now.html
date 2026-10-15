@@ -1,0 +1,149 @@
+<!-- wp:paragraph -->
+<p>For years, Stocky was the quiet workhorse behind a lot of Shopify retail stores. It came free with Shopify POS Pro, it suggested what to reorder, and it turned those suggestions into purchase orders you could receive against. On 31 August 2026 it stopped working. If you relied on it, your weekly buying routine probably broke with it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This guide covers what happened, what Shopify itself still gives you, and a practical plan to get back to ordering with confidence, whichever tool you choose.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What happened to Stocky</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Shopify removed Stocky from the App Store on 2 February 2026, so no new stores could install it. Existing stores could keep using it until 31 August 2026, when it was switched off. Shopify's advice to merchants is to move to the inventory features built into Shopify admin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What Shopify admin does, and doesn't, cover</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Shopify's built-in inventory tools are solid for the day-to-day: stock levels per location, adjustments, transfers between locations and low-stock visibility. If all you used Stocky for was counting and moving stock, you may not need anything else.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The gap is planning. Admin tells you what you have; it doesn't tell you <strong>what to reorder, from which supplier, and how many</strong>, based on how fast things sell and how long suppliers take. That calculation is the part most Stocky users opened it for every week.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 1: Write down how you actually buy</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Before picking a replacement, spend ten minutes on paper. It will save you from paying for features you don't need.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Suppliers:</strong> how many, and roughly how many SKUs from each?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Lead times:</strong> how long does each supplier take from order to delivery?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Rules:</strong> case packs (sold in boxes of 6, 12, 24), minimum order quantities or values?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Rhythm:</strong> do you order weekly, monthly, or when something runs low?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Locations:</strong> one stockroom, or several shops each with their own stock?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Bundles:</strong> do you sell kits or sets made of other products?</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 2: Rebuild your supplier list from a sheet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Here's the awkward part: according to Shopify's help centre, Stocky couldn't export suppliers. So most stores are rebuilding their supplier data. The good news is that you probably have most of it already, spread across:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>old Stocky reports or purchase order CSVs you downloaded,</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>a Shopify product export (Products → Export), which includes SKU, barcode, vendor and cost per item,</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>your suppliers' own price lists.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Combine them into one sheet with one row per SKU and these columns: <code>SKU</code>, <code>Supplier</code>, <code>Supplier SKU</code>, <code>Cost</code>, <code>Case pack</code>, <code>Minimum order</code>, <code>Lead time (days)</code>. Only SKU and supplier are essential; fill in the rest where you know it. If your product vendor field already holds the supplier name, you may not need a sheet at all.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 3: Decide how you'll work out quantities</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Whatever tool you use, check that you understand how it reaches its numbers. The standard method is simple:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"rd-formula"} -->
+<p class="rd-formula">order = (lead time + days to cover) × sales per day + safety stock − in stock − on order</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The details matter: is "sales per day" an average of the last 30 days, or does it weigh recent weeks more? Does it ignore days the item was out of stock (otherwise a stock-out makes the next order smaller, which causes the next stock-out)? Does it round to case packs? We go through this in <a href="/how-to-calculate-reorder-point/">how to calculate a reorder point</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 4: Bring open orders across</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Any purchase orders that were open in Stocky when it closed still matter: that stock is on its way. Re-enter them in your new tool as sent orders, so they count as stock on order. Otherwise you'll get suggestions to buy things that are already in a lorry.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 5: Run it alongside your gut for two weeks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For the first couple of order cycles, compare the suggestions with what you'd have ordered anyway. Where they differ, find out why. Usually it's a lead time that's wrong, a supplier's case pack that isn't set, or a sales spike from a promotion. Fix the input once, and the suggestion is right from then on.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What to look for in a replacement</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Explainable numbers.</strong> You should be able to see why it suggests 48 and not 24.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Supplier rules:</strong> lead times, case packs and minimums per supplier or item.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Receiving into Shopify</strong>, including partial deliveries, so stock is right without double entry.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Bundles</strong> counted against their components, if you sell them.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>A price that fits your size.</strong> Many inventory apps are built and priced for large brands.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>That list is exactly what we built <a href="/stocky-alternative/">Reorder Desk</a> around: a reorder list with the sum behind every quantity, purchase orders per supplier, receiving with undo, bundles, and a supplier import that reads Stocky and Shopify column names. It's free for your 50 best-selling variants.</p>
+<!-- /wp:paragraph -->

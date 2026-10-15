@@ -1,0 +1,109 @@
+<!-- wp:paragraph -->
+<p>A reorder point answers one question: <strong>how low can stock fall before I must place an order?</strong> Order later than that and you'll run out before the delivery arrives. Order much earlier and you're tying up cash for nothing. Here's how to work it out properly, with a real example.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The formula</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"rd-formula"} -->
+<p class="rd-formula">reorder point = sales per day × lead time + safety stock</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>When the stock you have plus the stock already on order falls to this number, it's time to order. Three inputs, each with a trap.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">1. Sales per day</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The obvious approach is "units sold in the last 30 days ÷ 30". It works, but has two problems.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>It ignores stock-outs.</strong> If you sold 40 units in 30 days but were out of stock for 10 of them, you weren't selling 1.3 a day; you were selling 2 a day on the days you could. Use the plain average and your next order is a third too small, so you run out again. Always divide by the days the item was actually in stock.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>It treats every day equally.</strong> A product that's picking up speed looks slower than it is. A weighted average fixes this: count last week fully, the week before a bit less, and so on. In Reorder Desk each week back counts 0.85 times the week after it, so a trend shows up within a few weeks, but a single odd week doesn't throw everything off.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">2. Lead time</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Lead time is the time from <em>placing</em> an order to the stock being <em>on the shelf and sellable</em>, not the supplier's quoted shipping time. Include the days it takes you to approve and send the order, the supplier's processing time, transport, and the time to check and put stock away.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Look at your last few orders from each supplier and use a typical figure, not the best case. Different suppliers need different lead times; one store-wide number is the most common reason reorder points are wrong.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">3. Safety stock</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Safety stock is your cushion for a late delivery or a busier week than usual. There are statistical formulas for it, but for most small stores a simple rule works well and is easy to reason about: <strong>a number of days of sales</strong>. Seven days is a sensible start. Raise it for unreliable suppliers or items you can't afford to run out of; lower it for slow, expensive items.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A worked example</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A white mug sells 28 in the last week and 112 in the last four weeks, so about <strong>4 a day</strong>. The supplier takes <strong>14 days</strong>. You keep <strong>7 days</strong> of safety stock.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Part</th><th>Sum</th><th>Units</th></tr></thead><tbody><tr><td>Stock used during the lead time</td><td>4 × 14</td><td>56</td></tr><tr><td>Safety stock</td><td>4 × 7</td><td>28</td></tr><tr><td><strong>Reorder point</strong></td><td>56 + 28</td><td><strong>84</strong></td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>With 10 in stock and nothing on order, you're far below 84: order now. In fact 10 mugs last about two and a half days, so even ordering today you'll be out for a while. That's why it pays to look ahead: a good tool also tells you the date you'll <em>reach</em> the reorder point, so you can order before it happens.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">From reorder point to order quantity</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The reorder point tells you <em>when</em>. To know <em>how many</em>, decide how long each order should last after it arrives (the "days to cover"), then:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"rd-formula"} -->
+<p class="rd-formula">order = (lead time + days to cover) × sales per day + safety stock − in stock − on order</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For the mug, with 30 days to cover: (14 + 30) × 4 + 28 − 10 = <strong>194</strong>. Then round up to the supplier's case pack and minimum order; we cover that in <a href="/case-packs-and-minimum-orders/">case packs and minimum orders</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Mistakes to avoid</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Forgetting stock on order.</strong> Compare the reorder point with stock <em>plus</em> what's already ordered, or you'll order twice.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Counting bundle sales wrongly.</strong> If a gift set contains two mugs, each set sold is two mugs sold. Leave that out and the mug looks slower than it is.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Using last year's peak all year.</strong> Seasonal items need a rate for the coming weeks, not an annual average. Last year's pattern for the same weeks is a good guide.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Setting it once and forgetting it.</strong> Sales rates change. Recalculate at least every week, which is where a tool earns its keep.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><a href="/how-it-works/">Reorder Desk</a> does all of this for every variant in your Shopify store and shows the sum for each one, so you can check it the way you just did here.</p>
+<!-- /wp:paragraph -->

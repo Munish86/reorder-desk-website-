@@ -1,0 +1,95 @@
+<!-- wp:paragraph -->
+<p>You've worked out that you need 194 mugs. The supplier sells them in boxes of 12 and won't take an order under 250 units. So what do you actually order? Getting this step right is the difference between a purchase order the supplier accepts first time and three rounds of emails.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Case packs: always whole boxes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A case pack (or pack size, or "inner") is the number of units the supplier ships together. You can't order 194 mugs in boxes of 12; you order 16 boxes (192) or 17 boxes (204).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Round up, not to the nearest.</strong> Your quantity already includes only the safety stock you decided on. Rounding down to 192 quietly eats into it. Rounding up to 204 adds a few days of cover, which is usually the cheaper mistake.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"rd-formula"} -->
+<p class="rd-formula">boxes = ceiling(194 ÷ 12) = 17   →   order 204</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The exception: very slow, expensive items where an extra box is months of stock. There, ordering one box fewer and accepting a little more risk can be the right call. Decide item by item, not as a rule.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Minimum order quantity (MOQ)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>An MOQ per item says "we won't sell you fewer than N of this". If your rounded quantity is below it, raise it to the MOQ, and keep it in whole boxes:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"rd-formula"} -->
+<p class="rd-formula">204 &lt; 250   →   ceiling(250 ÷ 12) = 21 boxes   →   order 252</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Before you accept that, check what it means in days. At 4 a day, 252 mugs plus what you have is about two months of stock instead of six weeks. Fine for a steady seller; worth a second thought for something seasonal.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Minimum order value: the whole order, not one item</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Many suppliers set a minimum per order instead, say $500. That applies to the purchase order total, so the fix isn't to over-order one item. Instead:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Add items that will need ordering soon.</strong> Anything from the same supplier that will hit its reorder point in the next couple of weeks is a natural top-up.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Increase the fastest sellers first.</strong> Extra stock of an item that sells daily turns back into cash quickly.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Or wait.</strong> If nothing is urgent, hold the draft for a week and let more items join it.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>This is why it helps to see items that will need ordering <em>soon</em>, not only those that need ordering now. In Reorder Desk the "Order soon" status covers items that will reach their reorder point within two weeks, and a purchase order warns you when its total is under the supplier's minimum.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When to split or combine orders</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Combine</strong> when the same supplier has several items due within the same couple of weeks: one shipment, one invoice, and you clear the minimum easily.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Split</strong> when one urgent item would otherwise wait for a big order to be ready, or when part of an order ships from a different warehouse with a different lead time.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Close short</strong> when the supplier can't deliver the rest of an order. Mark the order as complete with what arrived, so the missing units stop counting as "on order" and get suggested again.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Keep the numbers in one place</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Case packs and minimums change. Keep them next to each SKU, with the supplier SKU and cost, rather than in your head or in old emails. When a supplier sends a new price list, import it again and update everything at once.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In <a href="/features/">Reorder Desk</a> you set case pack, minimum order and lead time per item (or import them from the supplier's sheet), and every suggested quantity is rounded for you, with the rounding written out in its "why".</p>
+<!-- /wp:paragraph -->

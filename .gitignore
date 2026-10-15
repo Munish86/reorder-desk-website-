@@ -1,0 +1,11 @@
+# Local admin login: never commit
+local-login.txt
+
+# Screenshots from tools/shots.mjs
+tools/.shots/
+
+# WP-CLI binary (download: https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar)
+tools/wp-cli.phar
+
+.DS_Store
+Thumbs.db

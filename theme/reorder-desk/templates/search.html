@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"rd-site-header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"rd-main","layout":{"type":"default"}} -->
+<main class="wp-block-group rd-main"><!-- wp:group {"className":"rd-page-hero","layout":{"type":"constrained"}} -->
+<div class="wp-block-group rd-page-hero"><!-- wp:query-title {"type":"search"} /-->
+
+<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search the site","buttonText":"Search"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"rd-section rd-section--canvas rd-section--line rd-posts","layout":{"type":"constrained"}} -->
+<div class="wp-block-group rd-section rd-section--canvas rd-section--line rd-posts"><!-- wp:query {"queryId":1,"query":{"perPage":12,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide"} -->
+<div class="wp-block-query alignwide"><!-- wp:post-template {"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+<!-- wp:post-title {"level":2,"isLink":true} /-->
+
+<!-- wp:post-excerpt {"excerptLength":30} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Nothing matched your search. Try other words, or browse the <a href="/help/">help centre</a>.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"rd-site-footer"} /-->

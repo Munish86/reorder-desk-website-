@@ -1,0 +1,5 @@
+# Keep LF everywhere (tools/wp.sh breaks with CRLF); binaries untouched
+* text=auto eol=lf
+*.png binary
+*.webp binary
+*.woff2 binary
